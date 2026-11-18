@@ -70,7 +70,8 @@ function installNghdl
     # Do not trap on error of any command. Let NGHDL script handle its own errors.
     trap "" ERR
 
-    ./install-nghdl.sh --install       # Install NGHDL
+    cp ../install-eSim-scripts/install-nghdl-25.04.sh install-nghdl-scripts/   # nghdl.zip ships no 25.04 script
+    bash install-nghdl-scripts/install-nghdl-25.04.sh --install
         
     # Set trap again to error_exit function to exit on errors
     trap error_exit ERR
