@@ -1,3 +1,5 @@
+> **FOSSEE Winter Internship 2026, Screening Task 4 (eSim 2.5 on Ubuntu 25.04):** the issues found, the fixes and the logs are in [Ubuntu/REPORT-25.04.md](Ubuntu/REPORT-25.04.md).
+
 eSim Packaging
 ====
 
