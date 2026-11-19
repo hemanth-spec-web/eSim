@@ -241,6 +241,21 @@ function copyKicadLibrary
 
     # Copy symbol table for eSim custom symbols
     sed "s/KICAD6_SYMBOL_DIR/KICAD${kicad_major}_SYMBOL_DIR/g" kicadLibrary/template/sym-lib-table > "$kicad_cfg/sym-lib-table"
+
+    # The template lists Legacy (.lib) libraries (PSpice/LTspice converter output) that this package does not install
+    # into the KiCad symbol directory. KiCad 8 reports a "Load Error" for every enabled entry whose file is missing,
+    # so disable those entries (they stay in the table and can be re-enabled if the .lib files are added later)
+    python3 - "$kicad_cfg/sym-lib-table" <<'PY'
+import os, re, sys
+p = sys.argv[1]
+out = []
+for line in open(p):
+    m = re.search(r'\(type "Legacy"\)\(uri "\$\{KICAD\d+_SYMBOL_DIR\}/([^"]+)"\)', line)
+    if m and '(disabled)' not in line and not os.path.exists('/usr/share/kicad/symbols/' + m.group(1)):
+        line = line.rstrip('\n')[:-1] + '(disabled))\n'
+    out.append(line)
+open(p, 'w').writelines(out)
+PY
     echo "symbol table copied in the directory"
 
     # Copy KiCad symbols made for eSim
