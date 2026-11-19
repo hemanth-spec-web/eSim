@@ -20,6 +20,7 @@
 #==========================================================
 
 nghdl="nghdl-simulator"
+llvm_version=18   # LLVM version installed by this script (used by the uninstall purge)
 ghdl="ghdl-4.1.0"
 verilator="verilator-4.210"
 config_dir="$HOME/.nghdl"

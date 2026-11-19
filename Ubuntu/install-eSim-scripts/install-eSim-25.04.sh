@@ -415,10 +415,11 @@ elif [ $option == "--uninstall" ];then
         echo "Removing eSim............................"
         sudo rm -rf $HOME/.esim $HOME/Desktop/esim.desktop /usr/bin/esim /usr/share/applications/esim.desktop
         echo "Removing KiCad..........................."
+        kicad_ver=$(dpkg-query -W -f='${Version}' kicad 2>/dev/null | cut -d. -f1,2)
         sudo apt purge -y kicad kicad-footprints kicad-libraries kicad-symbols kicad-templates
         sudo rm -rf /usr/share/kicad
 	sudo rm /etc/apt/sources.list.d/kicad*
-        rm -rf $HOME/.config/kicad/6.0
+        [ -n "$kicad_ver" ] && rm -rf "$HOME/.config/kicad/$kicad_ver"
 
         echo "Removing Virtual env......................."
         sudo rm -r $config_dir/env
@@ -432,7 +433,8 @@ elif [ $option == "--uninstall" ];then
         cd nghdl/
         if [ $? -eq 0 ];then
         	chmod +x install-nghdl.sh
-    	    ./install-nghdl.sh --uninstall
+    	    cp ../install-eSim-scripts/install-nghdl-25.04.sh install-nghdl-scripts/
+    	    bash install-nghdl-scripts/install-nghdl-25.04.sh --uninstall
     	    cd ../
     	    rm -rf nghdl
             if [ $? -eq 0 ];then
