@@ -1,0 +1,16 @@
+Enter proxy details if you are connected to internet thorugh proxy
+Is your internet connection behind proxy? (y/n): Install without proxy
+skip createConfigFile (done earlier)
+skip installDependency (done earlier)
+skip installKicad (done earlier)
+skip copyKicadLibrary (done earlier)
+skip installNghdl (done earlier)
+Installing SKY130 PDK......................
+Copying SKY130 PDK.........................
+'esim-start.sh' -> '/usr/bin/esim'
+'esim.desktop' -> '/usr/share/applications/esim.desktop'
+'esim.desktop' -> '/home/hemanth/Desktop/esim.desktop'
+'images/logo.png' -> '/home/hemanth/.esim/logo.png'
+-----------------eSim Installed Successfully-----------------
+Type "esim" in Terminal to launch it
+or double click on "eSim" icon placed on Desktop
