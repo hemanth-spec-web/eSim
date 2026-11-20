@@ -37,6 +37,8 @@ Clean run: VM restored to a fresh Ubuntu 25.04 snapshot, eSim-2.5.zip (sha256 in
 
 Not covered by that run: fix 10 was tested on the `copyKicadLibrary` function alone and then in the GUI (no Load Error when the symbol chooser was opened); the uninstall path (fix 9) was checked by reading and `bash -n` only; the KiCad 8 first-run "Configure Global Footprint Library Table" dialog is not addressed (the package ships no footprint table).
 
+Second clean run (run5): VM restored again to the same fresh snapshot, same checksum-verified eSim-2.5.zip, final scripts from this branch (including fix 10). `logs/run5-clean.log` (25,514 lines) ends with "eSim Installed Successfully"; GHDL 4.1.0, Verilator 4.210 and ngspice-35 are installed; `~/.config/kicad` contains only `8.0`; `logs/check-symtable.py` reports `enabled-but-missing: 0  eSim entries: 15`; opening the symbol chooser shows no Load Error and lists the eSim libraries (720 symbols loaded, screenshots/run5-chooser-eSim-libraries.png). So fix 10 is verified from a clean install, not only by the function test.
+
 Screenshots:
 - screenshots/issue1-broken-if-block-1.png : issue 1: the unclosed if block in install-eSim.sh
 - screenshots/issue1-broken-if-block-2.png : issue 1: the same function, continued
@@ -45,3 +47,4 @@ Screenshots:
 - screenshots/issue10-load-error.png : issue 10: Load Error for missing legacy libraries
 - screenshots/kicad8-footprint-table-dialog.png : KiCad 8 first-run footprint table prompt
 - screenshots/issue8-fixed-eSim-libraries-in-chooser.png : issue 8: eSim libraries in the symbol chooser after the fix
+- screenshots/run5-chooser-eSim-libraries.png : run5: symbol chooser on a clean install, eSim libraries listed, no Load Error
