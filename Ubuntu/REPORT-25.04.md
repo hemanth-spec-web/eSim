@@ -35,7 +35,7 @@ Observations, not fixed (outside the installer):
 ## Verification
 Clean run: VM restored to a fresh Ubuntu 25.04 snapshot, eSim-2.5.zip (sha256 in logs/eSim-2.5.zip.sha256) plus the three scripts from this branch, then `./install-eSim.sh --install`. `logs/run4-clean.log` ends with "eSim Installed Successfully". eSim starts, and the symbol chooser lists the eSim libraries (see screenshots/).
 
-Not covered by that run: fix 10 was tested on the `copyKicadLibrary` function alone and then in the GUI (no Load Error on the first or second opening of the symbol chooser); the uninstall path (fix 9) was checked by reading and `bash -n` only; the KiCad 8 first-run "Configure Global Footprint Library Table" dialog is not addressed (the package ships no footprint table).
+Not covered by that run: fix 10 was tested on the `copyKicadLibrary` function alone and then in the GUI (no Load Error when the symbol chooser was opened); the uninstall path (fix 9) was checked by reading and `bash -n` only; the KiCad 8 first-run "Configure Global Footprint Library Table" dialog is not addressed (the package ships no footprint table).
 
 Screenshots:
 - screenshots/issue1-broken-if-block-1.png : issue 1: the unclosed if block in install-eSim.sh
