@@ -1,0 +1,225 @@
+Detected Ubuntu Version: 25.04
+Running script: /home/hemanth/Downloads/eSim-2.5/install-eSim-scripts/install-eSim-25.04.sh --uninstall
+Are you sure? It will remove eSim completely including KiCad, Makerchip, NGHDL and SKY130 PDK along with their models and libraries (y/n):Removing eSim............................
+Removing KiCad...........................
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following packages were automatically installed and are no longer required:
+  libfreeimage3                    libraw23t64
+  libgit2-1.9                      libtbb12
+  libglew2.2                       libtbbbind-2-5
+  libhwloc15                       libtbbmalloc2
+  libimath-3-1-29t64               libwxbase3.2-1t64
+  libjxr0t64                       libwxgtk-gl3.2-1t64
+  libngspice0                      libwxgtk3.2-1t64
+  libocct-data-exchange-7.8        linux-headers-6.14.0-15
+  libocct-draw-7.8                 linux-headers-6.14.0-15-generic
+  libocct-foundation-7.8           linux-modules-6.14.0-15-generic
+  libocct-modeling-algorithms-7.8  linux-modules-extra-6.14.0-15-generic
+  libocct-modeling-data-7.8        linux-tools-6.14.0-15
+  libocct-ocaf-7.8                 linux-tools-6.14.0-15-generic
+  libocct-visualization-7.8        occt-misc
+  libodbc2                         python3-six
+  libopenexr-3-1-30                python3-wxgtk4.0
+Use 'sudo apt autoremove' to remove them.
+
+REMOVING:
+  kicad*             kicad-libraries*  kicad-templates*
+  kicad-footprints*  kicad-symbols*
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 5, Not Upgrading: 0
+  Freed space: 571 MB
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 222861 files and directories currently installed.)
+Removing kicad (8.0.8+dfsg-1) ...
+Removing kicad-libraries (8.0.9~ubuntu25.04.1) ...
+Removing kicad-footprints (8.0.9~ubuntu25.04.1) ...
+Removing kicad-symbols (8.0.9~ubuntu25.04.1) ...
+dpkg: warning: while removing kicad-symbols, directory '/usr/share/kicad/symbols' not empty so not removed
+Removing kicad-templates (8.0.9~ubuntu25.04.1) ...
+dpkg: warning: while removing kicad-templates, directory '/usr/share/kicad' not empty so not removed
+Processing triggers for hicolor-icon-theme (0.18-2) ...
+Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+Processing triggers for libc-bin (2.41-6ubuntu1.2) ...
+Processing triggers for man-db (2.13.0-1) ...
+Processing triggers for shared-mime-info (2.4-5build1) ...
+Processing triggers for desktop-file-utils (0.28-1) ...
+Removing Virtual env.......................
+rm: cannot remove '/home/hemanth/.esim/env': No such file or directory
+Removing SKY130 PDK......................
+Removing NGHDL...........................
+Removing GHDL......................
+rm -f /usr/local/bin/ghdl1-llvm
+rm -f /usr/local/bin/ghdl
+rm -f /usr/local/lib/ghdl/libgrt.a
+rm -f /usr/local/lib/ghdl/grt.lst
+rm -f /usr/local/lib/ghdl/grt-exec.lst
+rm -f /usr/local/lib/ghdl/grt-shared.lst
+rm -f /usr/local/lib/ghdl/grt.ver
+rm -f /usr/local/lib/ghdl/libbacktrace.a
+rm -f -rf /usr/local/lib/ghdl
+rm -f -f "/usr/local/lib/libghdlvpi.so"
+rm -f -f "/usr/local/include/ghdl/vpi_user.h"
+rm -f -f "/usr/local/include/ghdl/vhpi_user.h"
+rm -f /usr/local/lib/libghdl-4_1_0.so
+rm -f "/usr/local/bin/ghwdump"
+rm -f "/usr/local/lib/libghw"
+rm -f "/usr/local/include/ghdl/libghw.h"
+Removing Verilator.................
+cd /usr/local/bin && rm -f verilator verilator_bin verilator_bin_dbg verilator_coverage_bin_dbg verilator_ccache_report verilator_coverage verilator_gantt verilator_includer verilator_profcfunc
+cd /usr/local/share/verilator/bin && rm -f verilator verilator_bin verilator_bin_dbg verilator_coverage_bin_dbg verilator_ccache_report verilator_coverage verilator_gantt verilator_includer verilator_profcfunc
+cd /usr/local/share/man/man1 && rm -f verilator.1 verilator_coverage.1 verilator_gantt.1 verilator_profcfunc.1
+cd /usr/local/share/verilator && rm -f include/verilated_config.h include/verilated.mk 
+cd /usr/local/share/verilator && rm -f include/*.[chv]* include/gtkwave/*.[chv]* include/vltstd/*.[chv]* 
+cd /usr/local/share/verilator && rm -f examples/*/*.[chv]*  examples/*/Makefile* examples/*/CMakeLists.txt
+rm /usr/local/share/pkgconfig/verilator.pc
+rm /usr/local/share/verilator/verilator-config.cmake
+rm /usr/local/share/verilator/verilator-config-version.cmake
+rmdir /usr/local/share/verilator/bin
+rmdir /usr/local/share/verilator/include/gtkwave
+rmdir /usr/local/share/verilator/include/vltstd
+rmdir /usr/local/share/verilator/include
+rmdir /usr/local/share/verilator/examples/make_hello_c
+rmdir /usr/local/share/verilator/examples/make_hello_sc
+rmdir /usr/local/share/verilator/examples/make_tracing_c
+rmdir /usr/local/share/verilator/examples/make_tracing_sc
+rmdir /usr/local/share/verilator/examples/make_protect_lib
+rmdir /usr/local/share/verilator/examples/cmake_hello_c
+rmdir /usr/local/share/verilator/examples/cmake_hello_sc
+rmdir /usr/local/share/verilator/examples/cmake_tracing_c
+rmdir /usr/local/share/verilator/examples/cmake_tracing_sc
+rmdir /usr/local/share/verilator/examples/cmake_protect_lib
+rmdir /usr/local/share/verilator/examples/xml_py
+rmdir /usr/local/share/verilator/examples
+rmdir /usr/local/share/verilator
+rmdir /usr/local/share/pkgconfig
+Removing libxaw7-dev...............
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following packages were automatically installed and are no longer required:
+  libfreeimage3                    libwxgtk3.2-1t64
+  libgit2-1.9                      libx11-dev
+  libglew2.2                       libxau-dev
+  libhwloc15                       libxcb1-dev
+  libice-dev                       libxdmcp-dev
+  libimath-3-1-29t64               libxext-dev
+  libjxr0t64                       libxmu-dev
+  libngspice0                      libxmu-headers
+  libocct-data-exchange-7.8        libxpm-dev
+  libocct-draw-7.8                 libxt-dev
+  libocct-foundation-7.8           linux-headers-6.14.0-15
+  libocct-modeling-algorithms-7.8  linux-headers-6.14.0-15-generic
+  libocct-modeling-data-7.8        linux-modules-6.14.0-15-generic
+  libocct-ocaf-7.8                 linux-modules-extra-6.14.0-15-generic
+  libocct-visualization-7.8        linux-tools-6.14.0-15
+  libodbc2                         linux-tools-6.14.0-15-generic
+  libopenexr-3-1-30                occt-misc
+  libraw23t64                      python3-six
+  libsm-dev                        python3-wxgtk4.0
+  libtbb12                         uuid-dev
+  libtbbbind-2-5                   x11proto-dev
+  libtbbmalloc2                    xorg-sgml-doctools
+  libwxbase3.2-1t64                xtrans-dev
+  libwxgtk-gl3.2-1t64
+Use 'sudo apt autoremove' to remove them.
+
+REMOVING:
+  libxaw7-dev*
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 1, Not Upgrading: 0
+  Freed space: 1,210 kB
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 207789 files and directories currently installed.)
+Removing libxaw7-dev:amd64 (2:1.0.16-1) ...
+Processing triggers for man-db (2.13.0-1) ...
+Removing LLVM......................
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following packages were automatically installed and are no longer required:
+  libfreeimage3 libgit2-1.9 libglew2.2 libhwloc15 libice-dev
+  libimath-3-1-29t64 libjxr0t64 libngspice0 libocct-data-exchange-7.8
+  libocct-draw-7.8 libocct-foundation-7.8 libocct-modeling-algorithms-7.8
+  libocct-modeling-data-7.8 libocct-ocaf-7.8 libocct-visualization-7.8
+  libodbc2 libopenexr-3-1-30 libraw23t64 libsm-dev libtbb12 libtbbbind-2-5
+  libtbbmalloc2 libwxbase3.2-1t64 libwxgtk-gl3.2-1t64 libwxgtk3.2-1t64
+  libx11-dev libxau-dev libxcb1-dev libxdmcp-dev libxext-dev libxmu-dev
+  libxmu-headers libxpm-dev libxt-dev libz3-4 libz3-dev
+  linux-headers-6.14.0-15 linux-headers-6.14.0-15-generic
+  linux-modules-6.14.0-15-generic linux-modules-extra-6.14.0-15-generic
+  linux-tools-6.14.0-15 linux-tools-6.14.0-15-generic llvm-18-linker-tools
+  llvm-18-runtime llvm-18-tools occt-misc python3-six python3-wxgtk4.0
+  uuid-dev x11proto-dev xorg-sgml-doctools xtrans-dev
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  llvm-18* llvm-18-dev*
+0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
+After this operation, 457 MB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 207709 files and directories currently installed.)
+Removing llvm-18-dev (1:18.1.8-17) ...
+Removing llvm-18 (1:18.1.8-17) ...
+Processing triggers for man-db (2.13.0-1) ...
+Processing triggers for libc-bin (2.41-6ubuntu1.2) ...
+Removing GNAT......................
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following packages were automatically installed and are no longer required:
+  gnat-14                          libx11-dev
+  gnat-14-x86-64-linux-gnu         libxau-dev
+  libfreeimage3                    libxcb1-dev
+  libgit2-1.9                      libxdmcp-dev
+  libglew2.2                       libxext-dev
+  libgnat-14                       libxmu-dev
+  libhwloc15                       libxmu-headers
+  libice-dev                       libxpm-dev
+  libimath-3-1-29t64               libxt-dev
+  libjxr0t64                       libz3-4
+  libngspice0                      libz3-dev
+  libocct-data-exchange-7.8        linux-headers-6.14.0-15
+  libocct-draw-7.8                 linux-headers-6.14.0-15-generic
+  libocct-foundation-7.8           linux-modules-6.14.0-15-generic
+  libocct-modeling-algorithms-7.8  linux-modules-extra-6.14.0-15-generic
+  libocct-modeling-data-7.8        linux-tools-6.14.0-15
+  libocct-ocaf-7.8                 linux-tools-6.14.0-15-generic
+  libocct-visualization-7.8        llvm-18-linker-tools
+  libodbc2                         llvm-18-runtime
+  libopenexr-3-1-30                llvm-18-tools
+  libraw23t64                      occt-misc
+  libsm-dev                        python3-six
+  libtbb12                         python3-wxgtk4.0
+  libtbbbind-2-5                   uuid-dev
+  libtbbmalloc2                    x11proto-dev
+  libwxbase3.2-1t64                xorg-sgml-doctools
+  libwxgtk-gl3.2-1t64              xtrans-dev
+  libwxgtk3.2-1t64
+Use 'sudo apt autoremove' to remove them.
+
+REMOVING:
+  gnat*
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 1, Not Upgrading: 0
+  Freed space: 34.8 kB
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 205161 files and directories currently installed.)
+Removing gnat (14.1ubuntu1) ...
+Processing triggers for man-db (2.13.0-1) ...
+----------------eSim Uninstalled Successfully----------------
